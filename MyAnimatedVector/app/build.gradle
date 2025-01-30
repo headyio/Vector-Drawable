@@ -1,0 +1,59 @@
+plugins {
+    alias(libs.plugins.android.application)
+    alias(libs.plugins.kotlin.android)
+    id "androidx.navigation.safeargs.kotlin"
+}
+
+android {
+    namespace 'com.heady.myanimatedvector'
+    compileSdk 35
+
+    defaultConfig {
+        applicationId "com.heady.myanimatedvector"
+        minSdk 33
+        targetSdk 35
+        versionCode 1
+        versionName "1.0"
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_11
+        targetCompatibility JavaVersion.VERSION_11
+    }
+    kotlinOptions {
+        jvmTarget = '11'
+    }
+    buildFeatures {
+        viewBinding true
+    }
+
+//    packagingOptions {
+//        exclude("META-INF/jersey-module-version")
+//        exclude("META-INF/AL2.0")
+//        exclude("META-INF/LGPL2.1")
+//    }
+}
+
+dependencies {
+
+    implementation libs.androidx.core.ktx
+    implementation libs.androidx.appcompat
+    implementation libs.material
+    implementation libs.androidx.activity
+    implementation libs.androidx.constraintlayout
+
+    implementation libs.androidx.navigation.runtime.ktx
+    implementation libs.androidx.navigation.fragment.ktx
+    implementation libs.androidx.navigation.ui.ktx
+
+//    classpath "androidx.navigation:navigation-safe-args-gradle-plugin:2.8.5"
+
+}
