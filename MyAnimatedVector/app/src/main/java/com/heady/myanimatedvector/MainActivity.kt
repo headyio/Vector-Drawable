@@ -34,20 +34,25 @@ class MainActivity : AppCompatActivity() {
         binding.bottomNavigationView.setupWithNavController(navController)
         binding.bottomNavigationView.setOnItemSelectedListener { it: MenuItem ->
             val options = NavOptions.Builder()
-//                .setPopUpTo(
-//                    destinationId = R.id.blankDest,
-//                    inclusive = false,
-//                    saveState = true
-//                )
+                .setPopUpTo(
+                    destinationId = R.id.blankDest,
+                    inclusive = false,
+                    saveState = true
+                )
                 .setRestoreState(true)
                 .build()
             val screenValue = when (it.itemId) {
-                R.id.magic -> 1
-                R.id.hearts -> 2
-                else -> 3
+                R.id.magic -> 0
+                R.id.hearts -> 1
+                else -> 2
+            }
+            val destination = when (it.itemId) {
+                R.id.magic -> R.id.blankDest
+                R.id.hearts -> R.id.blankDest2
+                else -> R.id.blankDest3
             }
             val bundle = bundleOf(ARG_SCREEN_TYPE to screenValue)
-            navController.navigate(R.id.blankDest, bundle, options)
+            navController.navigate(destination, bundle, options)
             true
         }
     }

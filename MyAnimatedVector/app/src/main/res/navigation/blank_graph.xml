@@ -8,7 +8,19 @@
     <fragment
         android:id="@+id/blankDest"
         android:name="com.heady.myanimatedvector.BlankFragment"
-        android:label="Blank Screen"
+        android:label="Blank Screen 1"
         tools:layout="@layout/fragment_blank" />
+
+    <fragment
+        android:id="@+id/blankDest2"
+        android:name="com.heady.myanimatedvector.Blank2Fragment"
+        android:label="Blank Screen 2"
+        tools:layout="@layout/fragment_blank_2" />
+
+    <fragment
+        android:id="@+id/blankDest3"
+        android:name="com.heady.myanimatedvector.Blank3Fragment"
+        android:label="Blank Screen 3"
+        tools:layout="@layout/fragment_blank_3" />
 
 </navigation>

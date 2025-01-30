@@ -6,7 +6,7 @@ import android.view.View
 import androidx.fragment.app.Fragment
 import com.heady.myanimatedvector.databinding.FragmentBlankBinding
 
-class BlankFragment : Fragment(R.layout.fragment_blank) {
+class Blank2Fragment : Fragment(R.layout.fragment_blank) {
 
     private val binding by viewBindings(FragmentBlankBinding::bind)
 

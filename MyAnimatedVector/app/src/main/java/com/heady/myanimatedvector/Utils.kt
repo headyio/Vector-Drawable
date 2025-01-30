@@ -67,3 +67,9 @@ inline fun <T : ViewBinding> AppCompatActivity.viewBinding(
 }
 
 const val ARG_SCREEN_TYPE = "ARG_SCREEN_TYPE"
+
+val colorResList = listOf(
+    android.R.color.holo_purple,
+    android.R.color.holo_green_light,
+    android.R.color.holo_orange_light
+)
