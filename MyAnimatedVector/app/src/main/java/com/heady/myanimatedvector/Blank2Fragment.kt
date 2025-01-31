@@ -5,11 +5,11 @@ import android.graphics.drawable.AnimatedVectorDrawable
 import android.os.Bundle
 import android.view.View
 import androidx.fragment.app.Fragment
-import com.heady.myanimatedvector.databinding.FragmentBlankBinding
+import com.heady.myanimatedvector.databinding.FragmentBlank2Binding
 
-class Blank2Fragment : Fragment(R.layout.fragment_blank) {
+class Blank2Fragment : Fragment(R.layout.fragment_blank_2) {
 
-    private val binding by viewBindings(FragmentBlankBinding::bind)
+    private val binding by viewBindings(FragmentBlank2Binding::bind)
 
     private var isChecked = false
 

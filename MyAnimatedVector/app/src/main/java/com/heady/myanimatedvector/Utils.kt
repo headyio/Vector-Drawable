@@ -18,6 +18,7 @@ package com.heady.myanimatedvector
 
 import android.view.LayoutInflater
 import android.view.View
+import androidx.annotation.DrawableRes
 import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.Lifecycle
@@ -73,3 +74,13 @@ val colorResList = listOf(
     android.R.color.holo_green_light,
     android.R.color.holo_orange_light
 )
+
+enum class Tabs(
+    val title: String,
+    @DrawableRes val icon: Int,
+) {
+    HOME(title = "Home", icon = R.drawable.ic_bn_check_close_final),
+    SEARCH(title = "Search", icon = R.drawable.ic_bn_check_close_final),
+    PROFILE(title = "Profile", icon = R.drawable.ic_bn_check_close_final),
+    SETTINGS(title = "Settings", icon = R.drawable.ic_bn_check_close_final)
+}
