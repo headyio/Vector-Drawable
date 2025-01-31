@@ -3,14 +3,14 @@
 
     <item
         android:id="@+id/magic"
-        android:icon="@drawable/awesome_selector"
+        android:icon="@drawable/ic_bn_check_close_final"
         android:title="magic" />
     <item
         android:id="@+id/hearts"
-        android:icon="@drawable/heart_selector"
+        android:icon="@drawable/ic_bn_check_close_final"
         android:title="hearts" />
     <item
         android:id="@+id/stars"
-        android:icon="@drawable/star_selector"
+        android:icon="@drawable/ic_bn_check_close_final"
         android:title="stars" />
 </menu>

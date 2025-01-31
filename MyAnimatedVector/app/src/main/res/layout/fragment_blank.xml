@@ -4,4 +4,12 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@android:color/black"
-    tools:context=".BlankFragment" />
+    tools:context=".BlankFragment">
+
+    <com.google.android.material.imageview.ShapeableImageView
+        android:id="@+id/iv_vector"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:layout_gravity="center" />
+
+</FrameLayout>

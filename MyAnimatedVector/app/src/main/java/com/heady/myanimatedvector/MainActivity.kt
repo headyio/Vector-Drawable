@@ -1,6 +1,5 @@
 package com.heady.myanimatedvector
 
-import android.graphics.drawable.AnimatedVectorDrawable
 import android.os.Bundle
 import android.view.MenuItem
 import androidx.activity.enableEdgeToEdge
@@ -8,6 +7,7 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.core.os.bundleOf
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
+import androidx.navigation.NavController
 import androidx.navigation.NavOptions
 import androidx.navigation.fragment.NavHostFragment
 import androidx.navigation.ui.setupWithNavController
@@ -33,27 +33,37 @@ class MainActivity : AppCompatActivity() {
         val navController = navHostFragment.navController
         binding.bottomNavigationView.setupWithNavController(navController)
         binding.bottomNavigationView.setOnItemSelectedListener { it: MenuItem ->
-            val options = NavOptions.Builder()
-                .setPopUpTo(
-                    destinationId = R.id.blankDest,
-                    inclusive = false,
-                    saveState = true
-                )
-                .setRestoreState(true)
-                .build()
-            val screenValue = when (it.itemId) {
-                R.id.magic -> 0
-                R.id.hearts -> 1
-                else -> 2
-            }
-            val destination = when (it.itemId) {
-                R.id.magic -> R.id.blankDest
-                R.id.hearts -> R.id.blankDest2
-                else -> R.id.blankDest3
-            }
-            val bundle = bundleOf(ARG_SCREEN_TYPE to screenValue)
-            navController.navigate(destination, bundle, options)
+            navigateToScreen(
+                menuItem = it,
+                navController = navController
+            )
             true
         }
+    }
+
+    private fun navigateToScreen(
+        menuItem: MenuItem,
+        navController: NavController
+    ) {
+        val options = NavOptions.Builder()
+            .setPopUpTo(
+                destinationId = R.id.blankDest,
+                inclusive = false,
+                saveState = true
+            )
+            .setRestoreState(true)
+            .build()
+        val screenValue = when (menuItem.itemId) {
+            R.id.magic -> 0
+            R.id.hearts -> 1
+            else -> 2
+        }
+        val destination = when (menuItem.itemId) {
+            R.id.magic -> R.id.blankDest
+            R.id.hearts -> R.id.blankDest2
+            else -> R.id.blankDest3
+        }
+        val bundle = bundleOf(ARG_SCREEN_TYPE to screenValue)
+        navController.navigate(destination, bundle, options)
     }
 }
