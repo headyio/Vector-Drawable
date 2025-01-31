@@ -26,9 +26,11 @@ class BlankFragment : Fragment(R.layout.fragment_blank) {
 
         binding.ivVector.setOnClickListener {
             if (isChecked) {
-                binding.ivVector.drawable.setTint(resources.getColor(R.color.white, null))
                 binding.ivVector.setImageResource(R.drawable.avd_bn_close_to_check)
+            } else {
+                binding.ivVector.setImageResource(R.drawable.avd_bn_check_to_close)
             }
+            binding.ivVector.drawable.setTint(resources.getColor(R.color.white, null))
             (binding.ivVector.drawable as AnimatedVectorDrawable).start()
             isChecked = isChecked.not()
         }
