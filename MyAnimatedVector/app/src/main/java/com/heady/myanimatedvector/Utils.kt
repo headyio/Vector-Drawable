@@ -77,10 +77,12 @@ val colorResList = listOf(
 
 enum class Tabs(
     val title: String,
-    @DrawableRes val icon: Int,
+    @DrawableRes val avdForwardIcon: Int,
+    @DrawableRes val avdBackwardIcon: Int,
+    @DrawableRes val staticIcon: Int,
 ) {
-    HOME(title = "Home", icon = R.drawable.ic_bn_check_close_final),
-    SEARCH(title = "Search", icon = R.drawable.ic_bn_check_close_final),
-    PROFILE(title = "Profile", icon = R.drawable.ic_bn_check_close_final),
-    SETTINGS(title = "Settings", icon = R.drawable.ic_bn_check_close_final)
+    HOME(title = "Home", avdForwardIcon = R.drawable.avd_bn_check_to_close, avdBackwardIcon = R.drawable.avd_bn_close_to_check, staticIcon = R.drawable.ic_close),
+    SEARCH(title = "Search", avdForwardIcon = R.drawable.avd_bn_check_to_close, avdBackwardIcon = R.drawable.avd_bn_close_to_check, staticIcon = R.drawable.ic_close),
+    PROFILE(title = "Profile", avdForwardIcon = R.drawable.avd_bn_check_to_close, avdBackwardIcon = R.drawable.avd_bn_close_to_check, staticIcon = R.drawable.ic_close),
+    SETTINGS(title = "Settings", avdForwardIcon = R.drawable.avd_settings_forward, avdBackwardIcon = R.drawable.avd_settings_backward, staticIcon = R.drawable.ic_settings)
 }

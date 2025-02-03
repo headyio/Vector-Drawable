@@ -18,21 +18,26 @@ class BlankFragment : Fragment(R.layout.fragment_blank) {
 
     private val viewPager2PageChangeListener = object : ViewPager2.OnPageChangeCallback() {
         override fun onPageSelected(position: Int) {
-            val tab = binding.tabLayout.getTabAt(position)
             Tabs.entries.forEachIndexed { index, tabs ->
                 when (index) {
                     position -> {
                         val tabView = TabView(
                             context = requireContext(),
+                            avdForwardIcon = Tabs.entries.get(index).avdForwardIcon,
+                            avdBackwardIcon = Tabs.entries.get(index).avdBackwardIcon,
+                            staticIcon = Tabs.entries.get(index).staticIcon,
                             title = Tabs.entries.get(index).title,
                             isSelected = true,
                             isPreviouslySelected = false
                         )
-                        tab?.setCustomView(tabView)
+                        binding.tabLayout.getTabAt(position)?.setCustomView(tabView)
                     }
                     previousPos -> {
                         val tabView = TabView(
                             context = requireContext(),
+                            avdForwardIcon = Tabs.entries.get(index).avdForwardIcon,
+                            avdBackwardIcon = Tabs.entries.get(index).avdBackwardIcon,
+                            staticIcon = Tabs.entries.get(index).staticIcon,
                             title = Tabs.entries.get(index).title,
                             isSelected = false,
                             isPreviouslySelected = true
@@ -42,6 +47,9 @@ class BlankFragment : Fragment(R.layout.fragment_blank) {
                     else -> {
                         val tabView = TabView(
                             context = requireContext(),
+                            avdForwardIcon = Tabs.entries.get(index).avdForwardIcon,
+                            avdBackwardIcon = Tabs.entries.get(index).avdBackwardIcon,
+                            staticIcon = Tabs.entries.get(index).staticIcon,
                             title = Tabs.entries.get(index).title,
                             isSelected = false,
                             isPreviouslySelected = false
@@ -76,6 +84,9 @@ class BlankFragment : Fragment(R.layout.fragment_blank) {
         TabLayoutMediator(tabLayout, viewPager) { tab, position ->
             val tabView = TabView(
                 context = requireContext(),
+                avdForwardIcon = Tabs.entries.get(position).avdForwardIcon,
+                avdBackwardIcon = Tabs.entries.get(position).avdBackwardIcon,
+                staticIcon = Tabs.entries.get(position).staticIcon,
                 title = Tabs.entries.get(position).title,
                 isSelected = tab.isSelected,
                 isPreviouslySelected = false

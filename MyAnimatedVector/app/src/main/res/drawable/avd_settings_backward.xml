@@ -1,0 +1,54 @@
+<animated-vector
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:aapt="http://schemas.android.com/aapt">
+    <aapt:attr name="android:drawable">
+        <vector
+            android:name="vector"
+            android:width="24dp"
+            android:height="24dp"
+            android:viewportWidth="24"
+            android:viewportHeight="24">
+            <group android:name="svgs">
+                <group android:name="animation">
+                    <path
+                        android:name="gear"
+                        android:pathData="M 8.778 0.285 L 8.31 4.034 C 8.076 4.132 7.841 4.249 7.607 4.385 C 7.373 4.522 7.148 4.669 6.933 4.825 L 3.448 3.36 L 0.227 8.925 L 3.243 11.209 C 3.224 11.346 3.214 11.478 3.214 11.605 L 3.214 12.395 C 3.214 12.522 3.224 12.654 3.243 12.791 L 0.227 15.075 L 3.448 20.64 L 6.933 19.175 C 7.148 19.331 7.368 19.478 7.592 19.615 C 7.817 19.751 8.056 19.868 8.31 19.966 L 8.778 23.715 L 15.222 23.715 L 15.69 19.966 C 15.924 19.868 16.159 19.751 16.393 19.615 C 16.627 19.478 16.852 19.331 17.067 19.175 L 20.522 20.64 L 23.744 15.075 L 20.728 12.791 C 20.767 12.654 20.786 12.522 20.786 12.395 L 20.786 11.605 C 20.786 11.478 20.776 11.346 20.757 11.209 L 23.773 8.925 L 20.552 3.36 L 17.067 4.825 C 16.852 4.669 16.632 4.522 16.408 4.385 C 16.183 4.249 15.944 4.132 15.69 4.034 L 15.222 0.285 Z M 10.858 2.628 L 13.171 2.628 L 13.552 5.733 C 14.157 5.889 14.719 6.118 15.236 6.421 C 15.754 6.723 16.227 7.099 16.657 7.548 L 19.556 6.318 L 20.698 8.31 L 18.18 10.214 C 18.277 10.487 18.345 10.775 18.385 11.078 C 18.424 11.38 18.443 11.688 18.443 12 C 18.443 12.312 18.424 12.62 18.385 12.922 C 18.345 13.225 18.277 13.513 18.18 13.786 L 20.698 15.69 L 19.556 17.682 L 16.657 16.481 C 16.227 16.91 15.754 17.277 15.236 17.579 C 14.719 17.882 14.157 18.111 13.552 18.267 L 13.142 21.372 L 10.829 21.372 L 10.448 18.267 C 9.843 18.111 9.281 17.882 8.764 17.579 C 8.246 17.277 7.773 16.901 7.343 16.452 L 4.444 17.682 L 3.302 15.69 L 5.82 13.786 C 5.723 13.494 5.655 13.201 5.615 12.908 C 5.576 12.615 5.557 12.312 5.557 12 C 5.557 11.668 5.576 11.356 5.615 11.063 C 5.655 10.77 5.723 10.477 5.82 10.184 L 3.302 8.31 L 4.444 6.318 L 7.343 7.519 C 7.773 7.09 8.246 6.723 8.764 6.421 C 9.281 6.118 9.843 5.889 10.448 5.733 Z"
+                        android:fillColor="#000000"
+                        android:strokeWidth="1"/>
+                </group>
+                <path
+                    android:name="shaft"
+                    android:pathData="M 12.059 16.1 Q 13.757 16.1 14.958 14.899 Q 16.159 13.699 16.159 12 Q 16.159 10.301 14.958 9.101 Q 13.757 7.9 12.059 7.9 Q 10.331 7.9 9.145 9.101 Q 7.958 10.301 7.958 12 Q 7.958 13.699 9.145 14.899 Q 10.331 16.1 12.059 16.1 Z"
+                    android:fillColor="#000000"
+                    android:strokeWidth="1"/>
+            </group>
+        </vector>
+    </aapt:attr>
+    <target android:name="animation">
+        <aapt:attr name="android:animation">
+            <set>
+                <objectAnimator
+                    android:propertyName="rotation"
+                    android:duration="800"
+                    android:valueFrom="0"
+                    android:valueTo="270"
+                    android:valueType="floatType"
+                    android:interpolator="@android:anim/accelerate_decelerate_interpolator"/>
+                <objectAnimator
+                    android:propertyName="pivotX"
+                    android:duration="800"
+                    android:valueFrom="12"
+                    android:valueTo="12"
+                    android:valueType="floatType"
+                    android:interpolator="@android:anim/accelerate_decelerate_interpolator"/>
+                <objectAnimator
+                    android:propertyName="pivotY"
+                    android:duration="800"
+                    android:valueFrom="12"
+                    android:valueTo="12"
+                    android:valueType="floatType"
+                    android:interpolator="@android:anim/accelerate_decelerate_interpolator"/>
+            </set>
+        </aapt:attr>
+    </target>
+</animated-vector>

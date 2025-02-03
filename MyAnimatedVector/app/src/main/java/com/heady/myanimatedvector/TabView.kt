@@ -6,6 +6,7 @@ import android.graphics.Typeface
 import android.graphics.drawable.AnimatedVectorDrawable
 import android.util.AttributeSet
 import android.widget.LinearLayout
+import androidx.annotation.DrawableRes
 import com.google.android.material.imageview.ShapeableImageView
 import com.google.android.material.textview.MaterialTextView
 
@@ -28,14 +29,27 @@ class TabView : LinearLayout {
 
     constructor(
         context: Context?,
+        @DrawableRes avdForwardIcon: Int,
+        @DrawableRes avdBackwardIcon: Int,
+        @DrawableRes staticIcon: Int,
         title: String,
         isSelected: Boolean,
         isPreviouslySelected: Boolean
     ) : super(context!!) {
-        initView(title, isSelected, isPreviouslySelected)
+        initView(
+            avdForwardIcon,
+            avdBackwardIcon,
+            staticIcon,
+            title,
+            isSelected,
+            isPreviouslySelected
+        )
     }
 
     private fun initView(
+        @DrawableRes avdForwardIcon: Int,
+        @DrawableRes avdBackwardIcon: Int,
+        @DrawableRes staticIcon: Int,
         title: String,
         isSelected: Boolean,
         isPreviouslySelected: Boolean
@@ -50,17 +64,17 @@ class TabView : LinearLayout {
         tvTitle.setTypeface(null, Typeface.NORMAL)
 
         if (isPreviouslySelected) {
-            ivVector.setImageResource(R.drawable.avd_bn_check_to_close)
+            ivVector.setImageResource(avdForwardIcon)
             ivVector.imageTintList = ColorStateList.valueOf(resources.getColor(android.R.color.darker_gray, null))
             (ivVector.drawable as AnimatedVectorDrawable).start()
         } else if (isSelected) {
-            ivVector.setImageResource(R.drawable.avd_bn_close_to_check)
+            ivVector.setImageResource(avdBackwardIcon)
             ivVector.imageTintList = ColorStateList.valueOf(resources.getColor(android.R.color.holo_purple, null))
             tvTitle.setTextColor(resources.getColor(android.R.color.holo_purple, null))
             tvTitle.setTypeface(null, Typeface.BOLD)
             (ivVector.drawable as AnimatedVectorDrawable).start()
         } else {
-            ivVector.setImageResource(R.drawable.ic_close)
+            ivVector.setImageResource(staticIcon)
             ivVector.imageTintList = ColorStateList.valueOf(resources.getColor(android.R.color.darker_gray, null))
         }
     }
