@@ -14,16 +14,25 @@ class BlankFragment : Fragment(R.layout.fragment_blank) {
 
     private val binding by viewBindings(FragmentBlankBinding::bind)
 
+    private var previousPos = 0
+
     private val viewPager2PageChangeListener = object : ViewPager2.OnPageChangeCallback() {
         override fun onPageSelected(position: Int) {
             val tab = binding.tabLayout.getTabAt(position)
             Tabs.entries.forEachIndexed { index, tabs ->
-                if (index == position) {
-                    tab?.setCustomView(TabView(requireContext(), true))
-                } else {
-                    binding.tabLayout.getTabAt(index)?.setCustomView(TabView(requireContext(), false))
+                when (index) {
+                    position -> {
+                        tab?.setCustomView(TabView(requireContext(), true, false))
+                    }
+                    previousPos -> {
+                        binding.tabLayout.getTabAt(index)?.setCustomView(TabView(requireContext(), false, true))
+                    }
+                    else -> {
+                        binding.tabLayout.getTabAt(index)?.setCustomView(TabView(requireContext(), false, false))
+                    }
                 }
             }
+            previousPos = position
         }
     }
 
@@ -48,7 +57,7 @@ class BlankFragment : Fragment(R.layout.fragment_blank) {
         viewPager.registerOnPageChangeCallback(viewPager2PageChangeListener)
         TabLayoutMediator(tabLayout, viewPager) { tab, position ->
 //            tab.text = Tabs.entries[position].title
-            tab.setCustomView(TabView(requireContext(), tab.isSelected))
+            tab.setCustomView(TabView(requireContext(), tab.isSelected, false))
         }.attach()
     }
 
