@@ -26,7 +26,10 @@ class MainActivity : AppCompatActivity() {
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
             insets
         }
+        setupBottomNav()
+    }
 
+    private fun setupBottomNav() {
         val navHostFragment = supportFragmentManager.findFragmentById(
             R.id.nav_host_container
         ) as NavHostFragment
