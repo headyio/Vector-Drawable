@@ -2,6 +2,7 @@ package com.heady.myanimatedvector
 
 import android.content.Context
 import android.content.res.ColorStateList
+import android.graphics.Typeface
 import android.graphics.drawable.AnimatedVectorDrawable
 import android.util.AttributeSet
 import android.widget.LinearLayout
@@ -46,6 +47,7 @@ class TabView : LinearLayout {
 
         tvTitle.text = title
         tvTitle.setTextColor(resources.getColor(android.R.color.darker_gray, null))
+        tvTitle.setTypeface(null, Typeface.NORMAL)
 
         if (isPreviouslySelected) {
             ivVector.setImageResource(R.drawable.avd_bn_check_to_close)
@@ -55,6 +57,7 @@ class TabView : LinearLayout {
             ivVector.setImageResource(R.drawable.avd_bn_close_to_check)
             ivVector.imageTintList = ColorStateList.valueOf(resources.getColor(android.R.color.holo_purple, null))
             tvTitle.setTextColor(resources.getColor(android.R.color.holo_purple, null))
+            tvTitle.setTypeface(null, Typeface.BOLD)
             (ivVector.drawable as AnimatedVectorDrawable).start()
         } else {
             ivVector.setImageResource(R.drawable.ic_close)

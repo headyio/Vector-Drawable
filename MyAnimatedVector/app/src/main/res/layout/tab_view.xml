@@ -19,6 +19,7 @@
         android:layout_height="wrap_content"
         android:text="title"
         android:textAlignment="center"
-        app:counterOverflowTextAppearance="@style/TextAppearance.Material3.BodySmall" />
+        android:textAppearance="@style/TextAppearance.Material3.BodySmall"
+        android:textSize="10sp" />
 
 </LinearLayout>
