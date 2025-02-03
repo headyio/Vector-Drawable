@@ -22,13 +22,31 @@ class BlankFragment : Fragment(R.layout.fragment_blank) {
             Tabs.entries.forEachIndexed { index, tabs ->
                 when (index) {
                     position -> {
-                        tab?.setCustomView(TabView(requireContext(), true, false))
+                        val tabView = TabView(
+                            context = requireContext(),
+                            title = Tabs.entries.get(index).title,
+                            isSelected = true,
+                            isPreviouslySelected = false
+                        )
+                        tab?.setCustomView(tabView)
                     }
                     previousPos -> {
-                        binding.tabLayout.getTabAt(index)?.setCustomView(TabView(requireContext(), false, true))
+                        val tabView = TabView(
+                            context = requireContext(),
+                            title = Tabs.entries.get(index).title,
+                            isSelected = false,
+                            isPreviouslySelected = true
+                        )
+                        binding.tabLayout.getTabAt(index)?.setCustomView(tabView)
                     }
                     else -> {
-                        binding.tabLayout.getTabAt(index)?.setCustomView(TabView(requireContext(), false, false))
+                        val tabView = TabView(
+                            context = requireContext(),
+                            title = Tabs.entries.get(index).title,
+                            isSelected = false,
+                            isPreviouslySelected = false
+                        )
+                        binding.tabLayout.getTabAt(index)?.setCustomView(tabView)
                     }
                 }
             }
@@ -56,8 +74,13 @@ class BlankFragment : Fragment(R.layout.fragment_blank) {
         )
         viewPager.registerOnPageChangeCallback(viewPager2PageChangeListener)
         TabLayoutMediator(tabLayout, viewPager) { tab, position ->
-//            tab.text = Tabs.entries[position].title
-            tab.setCustomView(TabView(requireContext(), tab.isSelected, false))
+            val tabView = TabView(
+                context = requireContext(),
+                title = Tabs.entries.get(position).title,
+                isSelected = tab.isSelected,
+                isPreviouslySelected = false
+            )
+            tab.setCustomView(tabView)
         }.attach()
     }
 
