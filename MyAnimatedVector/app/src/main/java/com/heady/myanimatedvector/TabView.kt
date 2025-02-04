@@ -63,19 +63,23 @@ class TabView : LinearLayout {
         tvTitle.setTextColor(resources.getColor(android.R.color.darker_gray, null))
         tvTitle.setTypeface(null, Typeface.NORMAL)
 
-        if (isPreviouslySelected) {
-            ivVector.setImageResource(avdForwardIcon)
-            ivVector.imageTintList = ColorStateList.valueOf(resources.getColor(android.R.color.darker_gray, null))
-            (ivVector.drawable as AnimatedVectorDrawable).start()
-        } else if (isSelected) {
-            ivVector.setImageResource(avdBackwardIcon)
-            ivVector.imageTintList = ColorStateList.valueOf(resources.getColor(android.R.color.holo_purple, null))
-            tvTitle.setTextColor(resources.getColor(android.R.color.holo_purple, null))
-            tvTitle.setTypeface(null, Typeface.BOLD)
-            (ivVector.drawable as AnimatedVectorDrawable).start()
-        } else {
-            ivVector.setImageResource(staticIcon)
-            ivVector.imageTintList = ColorStateList.valueOf(resources.getColor(android.R.color.darker_gray, null))
+        when {
+            isPreviouslySelected -> {
+                ivVector.setImageResource(avdForwardIcon)
+                ivVector.imageTintList = ColorStateList.valueOf(resources.getColor(android.R.color.darker_gray, null))
+                (ivVector.drawable as AnimatedVectorDrawable).start()
+            }
+            isSelected -> {
+                ivVector.setImageResource(avdBackwardIcon)
+                ivVector.imageTintList = ColorStateList.valueOf(resources.getColor(android.R.color.holo_purple, null))
+                tvTitle.setTextColor(resources.getColor(android.R.color.holo_purple, null))
+                tvTitle.setTypeface(null, Typeface.BOLD)
+                (ivVector.drawable as AnimatedVectorDrawable).start()
+            }
+            else -> {
+                ivVector.setImageResource(staticIcon)
+                ivVector.imageTintList = ColorStateList.valueOf(resources.getColor(android.R.color.darker_gray, null))
+            }
         }
     }
 }

@@ -25,11 +25,12 @@ class Blank2Fragment : Fragment(R.layout.fragment_blank_2) {
         binding.ivVector.drawable.setTint(resources.getColor(R.color.white, null))
 
         binding.ivVector.setOnClickListener {
-            if (isChecked) {
-                binding.ivVector.setImageResource(R.drawable.avd_bn_close_to_check)
+            val avd = if (isChecked) {
+                R.drawable.avd_bn_close_to_check
             } else {
-                binding.ivVector.setImageResource(R.drawable.avd_bn_check_to_close)
+                R.drawable.avd_bn_check_to_close
             }
+            binding.ivVector.setImageResource(avd)
             binding.ivVector.drawable.setTint(resources.getColor(R.color.white, null))
             (binding.ivVector.drawable as AnimatedVectorDrawable).start()
             isChecked = isChecked.not()
