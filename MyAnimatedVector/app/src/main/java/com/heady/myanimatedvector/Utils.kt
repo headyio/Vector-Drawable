@@ -81,8 +81,28 @@ enum class Tabs(
     @DrawableRes val avdBackwardIcon: Int,
     @DrawableRes val staticIcon: Int,
 ) {
-    HOME(title = "Home", avdForwardIcon = R.drawable.avd_bn_check_to_close, avdBackwardIcon = R.drawable.avd_bn_close_to_check, staticIcon = R.drawable.ic_close),
-    SEARCH(title = "Search", avdForwardIcon = R.drawable.avd_bn_check_to_close, avdBackwardIcon = R.drawable.avd_bn_close_to_check, staticIcon = R.drawable.ic_close),
-    PROFILE(title = "Profile", avdForwardIcon = R.drawable.avd_bn_check_to_close, avdBackwardIcon = R.drawable.avd_bn_close_to_check, staticIcon = R.drawable.ic_close),
-    SETTINGS(title = "Settings", avdForwardIcon = R.drawable.avd_settings_forward, avdBackwardIcon = R.drawable.avd_settings_backward, staticIcon = R.drawable.ic_settings)
+    HOME(
+        title = "Home",
+        avdForwardIcon = R.drawable.avd_bn_check_to_close,
+        avdBackwardIcon = R.drawable.avd_bn_close_to_check,
+        staticIcon = R.drawable.ic_close
+    ),
+    SEARCH(
+        title = "Search",
+        avdForwardIcon = R.drawable.avd_bn_check_to_close,
+        avdBackwardIcon = R.drawable.avd_bn_close_to_check,
+        staticIcon = R.drawable.ic_close
+    ),
+    PROFILE(
+        title = "Profile",
+        avdForwardIcon = R.drawable.avd_profile,
+        avdBackwardIcon = R.drawable.avd_profile,
+        staticIcon = R.drawable.ic_profile
+    ),
+    SETTINGS(
+        title = "Settings",
+        avdForwardIcon = R.drawable.avd_settings_forward,
+        avdBackwardIcon = R.drawable.avd_settings_backward,
+        staticIcon = R.drawable.ic_settings
+    )
 }
