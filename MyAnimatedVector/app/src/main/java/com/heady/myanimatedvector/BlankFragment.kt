@@ -104,7 +104,7 @@ class BlankFragment : Fragment(R.layout.fragment_blank) {
     ) {
         override fun getItemCount(): Int = Tabs.entries.size
         override fun createFragment(position: Int): Fragment {
-            return Blank4Fragment()
+            return Blank4Fragment.newInstance(position)
         }
     }
 }

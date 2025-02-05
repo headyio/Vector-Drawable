@@ -80,29 +80,34 @@ enum class Tabs(
     @DrawableRes val avdForwardIcon: Int,
     @DrawableRes val avdBackwardIcon: Int,
     @DrawableRes val staticIcon: Int,
+    @DrawableRes val animatedSelector: Int,
 ) {
     HOME(
         title = "Home",
         avdForwardIcon = R.drawable.avd_home_forward,
         avdBackwardIcon = R.drawable.avd_home_backward,
-        staticIcon = R.drawable.ic_home
+        staticIcon = R.drawable.ic_home,
+        animatedSelector = R.drawable.ic_bn_home_final
     ),
     SEARCH(
         title = "Search",
         avdForwardIcon = R.drawable.avd_search_slow,
         avdBackwardIcon = R.drawable.avd_search_slow,
-        staticIcon = R.drawable.ic_search
+        staticIcon = R.drawable.ic_search,
+        animatedSelector = R.drawable.ic_bn_search_final
     ),
     PROFILE(
         title = "Profile",
         avdForwardIcon = R.drawable.avd_profile,
         avdBackwardIcon = R.drawable.avd_profile,
-        staticIcon = R.drawable.ic_profile
+        staticIcon = R.drawable.ic_profile,
+        animatedSelector = R.drawable.ic_bn_profile_final
     ),
     SETTINGS(
         title = "Settings",
         avdForwardIcon = R.drawable.avd_settings_forward,
         avdBackwardIcon = R.drawable.avd_settings_backward,
-        staticIcon = R.drawable.ic_settings
+        staticIcon = R.drawable.ic_settings,
+        animatedSelector = R.drawable.ic_bn_settings_final
     )
 }
