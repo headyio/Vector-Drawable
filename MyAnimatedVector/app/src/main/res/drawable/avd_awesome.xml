@@ -1,0 +1,79 @@
+<animated-vector
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:aapt="http://schemas.android.com/aapt">
+    <aapt:attr name="android:drawable">
+        <vector
+            android:name="vector"
+            android:width="24dp"
+            android:height="24dp"
+            android:viewportWidth="24"
+            android:viewportHeight="24">
+            <group android:name="big_star_animation">
+                <path
+                    android:name="big_star"
+                    android:pathData="M 11.545 9.727 L 9.273 4.727 L 7 9.727 L 2 12 L 7 14.273 L 9.273 19.273 L 11.545 14.273 L 16.545 12 Z M 10.173 12.9 L 9.273 14.882 L 8.373 12.9 L 6.391 12 L 8.373 11.1 L 9.273 9.118 L 10.173 11.1 L 12.155 12 Z"
+                    android:fillColor="#000"
+                    android:strokeWidth="1"/>
+            </group>
+            <group android:name="top_star_animation">
+                <path
+                    android:name="top_star"
+                    android:pathData="M 19.5 6.773 L 22 5.636 L 19.5 4.5 L 18.364 2 L 17.227 4.5 L 14.727 5.636 L 17.227 6.773 L 18.364 9.273 Z"
+                    android:fillColor="#000"
+                    android:strokeWidth="1"/>
+            </group>
+            <group android:name="bottom_star_animation">
+                <path
+                    android:name="bottom_star"
+                    android:pathData="M 17.227 17.227 L 14.727 18.364 L 17.227 19.5 L 18.364 22 L 19.5 19.5 L 22 18.364 L 19.5 17.227 L 18.364 14.727 Z"
+                    android:fillColor="#000"
+                    android:strokeWidth="1"/>
+            </group>
+        </vector>
+    </aapt:attr>
+    <target android:name="big_star">
+        <aapt:attr name="android:animation">
+            <set>
+                <objectAnimator
+                    android:propertyName="fillAlpha"
+                    android:duration="200"
+                    android:valueFrom="0"
+                    android:valueTo="1"
+                    android:valueType="floatType"
+                    android:interpolator="@android:interpolator/fast_out_slow_in"/>
+                <objectAnimator
+                    android:propertyName="fillAlpha"
+                    android:startOffset="600"
+                    android:duration="200"
+                    android:valueFrom="0"
+                    android:valueTo="1"
+                    android:valueType="floatType"
+                    android:interpolator="@android:interpolator/fast_out_slow_in"/>
+            </set>
+        </aapt:attr>
+    </target>
+    <target android:name="top_star">
+        <aapt:attr name="android:animation">
+            <objectAnimator
+                android:propertyName="fillAlpha"
+                android:startOffset="200"
+                android:duration="200"
+                android:valueFrom="0"
+                android:valueTo="1"
+                android:valueType="floatType"
+                android:interpolator="@android:interpolator/fast_out_slow_in"/>
+        </aapt:attr>
+    </target>
+    <target android:name="bottom_star">
+        <aapt:attr name="android:animation">
+            <objectAnimator
+                android:propertyName="fillAlpha"
+                android:startOffset="400"
+                android:duration="200"
+                android:valueFrom="0"
+                android:valueTo="1"
+                android:valueType="floatType"
+                android:interpolator="@android:interpolator/fast_out_slow_in"/>
+        </aapt:attr>
+    </target>
+</animated-vector>

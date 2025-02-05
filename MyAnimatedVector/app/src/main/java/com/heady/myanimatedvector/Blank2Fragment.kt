@@ -21,14 +21,14 @@ class Blank2Fragment : Fragment(R.layout.fragment_blank_2) {
             resources.getColor(colorResList.get(colorResPos), null)
         )
 
-        binding.ivVector.setImageResource(R.drawable.avd_bn_check_to_close)
+        binding.ivVector.setImageResource(R.drawable.ic_heart)
         binding.ivVector.drawable.setTint(resources.getColor(R.color.white, null))
 
         binding.ivVector.setOnClickListener {
             val avd = if (isChecked) {
-                R.drawable.avd_bn_close_to_check
+                R.drawable.avd_heart_backward
             } else {
-                R.drawable.avd_bn_check_to_close
+                R.drawable.avd_heart_forward
             }
             binding.ivVector.setImageResource(avd)
             binding.ivVector.drawable.setTint(resources.getColor(R.color.white, null))
