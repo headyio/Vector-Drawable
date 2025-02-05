@@ -83,9 +83,9 @@ enum class Tabs(
 ) {
     HOME(
         title = "Home",
-        avdForwardIcon = R.drawable.avd_bn_check_to_close,
-        avdBackwardIcon = R.drawable.avd_bn_close_to_check,
-        staticIcon = R.drawable.ic_close
+        avdForwardIcon = R.drawable.avd_home_forward,
+        avdBackwardIcon = R.drawable.avd_home_backward,
+        staticIcon = R.drawable.ic_home
     ),
     SEARCH(
         title = "Search",
