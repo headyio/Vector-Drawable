@@ -89,9 +89,9 @@ enum class Tabs(
     ),
     SEARCH(
         title = "Search",
-        avdForwardIcon = R.drawable.avd_bn_check_to_close,
-        avdBackwardIcon = R.drawable.avd_bn_close_to_check,
-        staticIcon = R.drawable.ic_close
+        avdForwardIcon = R.drawable.avd_search_slow,
+        avdBackwardIcon = R.drawable.avd_search_slow,
+        staticIcon = R.drawable.ic_search
     ),
     PROFILE(
         title = "Profile",
