@@ -87,27 +87,27 @@ enum class Tabs(
         avdForwardIcon = R.drawable.avd_home_forward,
         avdBackwardIcon = R.drawable.avd_home_backward,
         staticIcon = R.drawable.ic_home,
-        animatedSelector = R.drawable.ic_bn_home_final
+        animatedSelector = R.drawable.ic_final_home
     ),
     SEARCH(
         title = "Search",
         avdForwardIcon = R.drawable.avd_search_slow,
         avdBackwardIcon = R.drawable.avd_search_slow,
         staticIcon = R.drawable.ic_search,
-        animatedSelector = R.drawable.ic_bn_search_final
+        animatedSelector = R.drawable.ic_final_search
     ),
     PROFILE(
         title = "Profile",
         avdForwardIcon = R.drawable.avd_profile,
         avdBackwardIcon = R.drawable.avd_profile,
         staticIcon = R.drawable.ic_profile,
-        animatedSelector = R.drawable.ic_bn_profile_final
+        animatedSelector = R.drawable.ic_final_profile
     ),
     SETTINGS(
         title = "Settings",
         avdForwardIcon = R.drawable.avd_settings_forward,
         avdBackwardIcon = R.drawable.avd_settings_backward,
         staticIcon = R.drawable.ic_settings,
-        animatedSelector = R.drawable.ic_bn_settings_final
+        animatedSelector = R.drawable.ic_final_settings
     )
 }

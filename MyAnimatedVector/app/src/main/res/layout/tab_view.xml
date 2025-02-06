@@ -11,7 +11,7 @@
         android:layout_width="24dp"
         android:layout_height="24dp"
         android:layout_gravity="center"
-        android:src="@drawable/ic_bn_check_close_final" />
+        android:src="@drawable/ic_final_check_close" />
 
     <com.google.android.material.textview.MaterialTextView
         android:id="@+id/tv_title"
