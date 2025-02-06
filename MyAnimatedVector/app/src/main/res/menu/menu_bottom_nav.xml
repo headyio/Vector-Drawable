@@ -11,6 +11,6 @@
         android:title="hearts" />
     <item
         android:id="@+id/stars"
-        android:icon="@drawable/ic_final_check_close"
+        android:icon="@drawable/ic_final_star"
         android:title="stars" />
 </menu>

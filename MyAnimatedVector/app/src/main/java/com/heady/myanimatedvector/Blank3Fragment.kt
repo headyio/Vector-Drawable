@@ -21,14 +21,14 @@ class Blank3Fragment : Fragment(R.layout.fragment_blank_3) {
             resources.getColor(colorResList.get(colorResPos), null)
         )
 
-        binding.ivVector.setImageResource(R.drawable.avd_check_close_forward)
+        binding.ivVector.setImageResource(R.drawable.ic_star_outline)
         binding.ivVector.drawable.setTint(resources.getColor(R.color.white, null))
 
         binding.ivVector.setOnClickListener {
             val avd = if (isChecked) {
-                R.drawable.avd_check_close_backward
+                R.drawable.avd_star_backward
             } else {
-                R.drawable.avd_check_close_forward
+                R.drawable.avd_star_forward
             }
             binding.ivVector.setImageResource(avd)
             binding.ivVector.drawable.setTint(resources.getColor(R.color.white, null))
