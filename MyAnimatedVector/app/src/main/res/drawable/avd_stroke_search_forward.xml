@@ -1,0 +1,39 @@
+<animated-vector
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:aapt="http://schemas.android.com/aapt">
+    <aapt:attr name="android:drawable">
+        <vector
+            android:name="vector"
+            android:width="24dp"
+            android:height="24dp"
+            android:viewportWidth="24"
+            android:viewportHeight="24">
+            <path
+                android:name="animating_search"
+                android:pathData="M 9.258 3.09 C 8.176 3.09 7.112 3.375 6.174 3.916 C 5.236 4.458 4.458 5.236 3.916 6.174 C 3.375 7.112 3.09 8.176 3.09 9.258 C 3.09 10.341 3.375 11.405 3.916 12.343 C 4.458 13.28 5.236 14.059 6.174 14.601 C 7.112 15.142 8.176 15.427 9.258 15.427 C 10.341 15.427 11.405 15.142 12.343 14.601 C 13.28 14.059 14.059 13.28 14.601 12.343 C 15.142 11.405 15.427 10.341 15.427 9.258 C 15.427 8.176 15.142 7.112 14.601 6.174 C 14.059 5.236 13.28 4.458 12.343 3.916 C 11.405 3.375 10.341 3.09 9.258 3.09 Z M 13.639 13.601 L 21.222 21.222 L 13.639 13.601 Z"
+                android:strokeColor="#000000"
+                android:strokeWidth="2.179638"
+                android:strokeLineCap="round"
+                android:strokeLineJoin="round"/>
+            <path
+                android:name="disabled_search"
+                android:pathData="M 9.258 3.09 C 5.851 3.09 3.09 5.851 3.09 9.258 C 3.09 12.665 5.851 15.427 9.258 15.427 C 12.665 15.427 15.427 12.665 15.427 9.258 C 15.427 5.851 12.665 3.09 9.258 3.09 Z M 13.639 13.601 L 21.222 21.222 Z"
+                android:strokeColor="#000000"
+                android:strokeAlpha="0.5"
+                android:strokeWidth="2.17964"
+                android:strokeLineCap="round"
+                android:strokeLineJoin="round"/>
+        </vector>
+    </aapt:attr>
+    <target android:name="animating_search">
+        <aapt:attr name="android:animation">
+            <objectAnimator
+                android:propertyName="trimPathStart"
+                android:duration="800"
+                android:valueFrom="0.1"
+                android:valueTo="1"
+                android:valueType="floatType"
+                android:interpolator="@android:interpolator/fast_out_slow_in"/>
+        </aapt:attr>
+    </target>
+</animated-vector>
