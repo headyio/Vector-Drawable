@@ -1,0 +1,17 @@
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="200dp"
+    android:height="50dp"
+    android:viewportWidth="200"
+    android:viewportHeight="50">
+
+    <!-- A simple horizontal line -->
+    <path
+        android:name="loopingPath"
+        android:pathData="M10,25 L190,25"
+        android:strokeWidth="4"
+        android:strokeColor="@color/black"
+        android:strokeLineCap="round"
+        android:trimPathStart="0"
+        android:trimPathEnd="0.5"
+        android:trimPathOffset="0" />
+</vector>

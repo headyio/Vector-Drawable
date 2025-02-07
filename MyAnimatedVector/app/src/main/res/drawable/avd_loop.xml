@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<animated-vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:drawable="@drawable/ic_looping_path">
+
+    <!-- Target the path and animate trimPathOffset -->
+    <target
+        android:name="loopingPath"
+        android:animation="@animator/trim_path_offset_anim"/>
+
+</animated-vector>
