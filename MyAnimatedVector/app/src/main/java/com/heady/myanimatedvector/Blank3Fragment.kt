@@ -26,9 +26,9 @@ class Blank3Fragment : Fragment(R.layout.fragment_blank_3) {
 
         binding.ivVector.setOnClickListener {
             val avd = if (isChecked) {
-                R.drawable.avd_star_backward
+                R.drawable.avd_stroke_star_backward
             } else {
-                R.drawable.avd_star_forward
+                R.drawable.avd_stroke_star_forward
             }
             binding.ivVector.setImageResource(avd)
             binding.ivVector.drawable.setTint(resources.getColor(R.color.white, null))

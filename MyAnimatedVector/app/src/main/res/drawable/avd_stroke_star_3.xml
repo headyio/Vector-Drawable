@@ -1,0 +1,37 @@
+<animated-vector
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:aapt="http://schemas.android.com/aapt">
+    <aapt:attr name="android:drawable">
+        <vector
+            android:name="vector"
+            android:width="75dp"
+            android:height="75dp"
+            android:viewportWidth="75"
+            android:viewportHeight="75">
+            <path
+                android:name="animating_star"
+                android:pathData="M 60.708 33.239 L 44.241 31.766 L 37.805 16.034 L 31.369 31.789 L 14.902 33.239 L 27.407 44.479 L 23.651 61.185 L 37.805 52.321 L 51.959 61.185 L 48.226 44.479 Z"
+                android:strokeColor="#000000"
+                android:strokeWidth="6.23496"
+                android:trimPathEnd="0.5"
+                android:strokeLineCap="round"/>
+            <path
+                android:name="disabled_star"
+                android:pathData="M 60.708 33.239 L 44.241 31.766 L 37.805 16.034 L 31.369 31.789 L 14.902 33.239 L 27.407 44.479 L 23.651 61.185 L 37.805 52.321 L 51.959 61.185 L 48.226 44.479 Z"
+                android:strokeColor="#000000"
+                android:strokeAlpha="0.5"
+                android:strokeWidth="6.23496"/>
+        </vector>
+    </aapt:attr>
+    <target android:name="animating_star">
+        <aapt:attr name="android:animation">
+            <objectAnimator
+                android:propertyName="trimPathOffset"
+                android:duration="800"
+                android:valueFrom="0"
+                android:valueTo="1"
+                android:valueType="floatType"
+                android:interpolator="@android:interpolator/fast_out_slow_in"/>
+        </aapt:attr>
+    </target>
+</animated-vector>
