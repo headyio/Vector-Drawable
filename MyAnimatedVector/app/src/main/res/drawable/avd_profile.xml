@@ -32,6 +32,7 @@
                     android:duration="800"
                     android:valueFrom="2.5"
                     android:valueTo="1"
+                    android:repeatCount="infinite"
                     android:valueType="floatType"
                     android:interpolator="@android:anim/bounce_interpolator"/>
                 <objectAnimator

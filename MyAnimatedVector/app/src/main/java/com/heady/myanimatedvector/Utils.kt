@@ -103,13 +103,13 @@ enum class Tabs(
         staticIcon = R.drawable.ic_profile,
         animatedSelector = R.drawable.ic_final_profile
     ),
-//    CHAT(
-//        title = "Chat",
-//        avdForwardIcon = R.drawable.avd_profile,
-//        avdBackwardIcon = R.drawable.avd_profile,
-//        staticIcon = R.drawable.ic_profile,
-//        animatedSelector = R.drawable.ic_final_profile
-//    ),
+    CHAT(
+        title = "Chat",
+        avdForwardIcon = R.drawable.avd_chat_forward,
+        avdBackwardIcon = R.drawable.avd_chat_backward,
+        staticIcon = R.drawable.ic_chat,
+        animatedSelector = R.drawable.ic_final_chat
+    ),
     SETTINGS(
         title = "Settings",
         avdForwardIcon = R.drawable.avd_settings_forward,

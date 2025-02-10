@@ -1,0 +1,76 @@
+<animated-vector
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:aapt="http://schemas.android.com/aapt">
+    <aapt:attr name="android:drawable">
+        <vector
+            android:name="vector"
+            android:width="90dp"
+            android:height="90dp"
+            android:viewportWidth="90"
+            android:viewportHeight="90">
+            <path
+                android:name="body"
+                android:pathData="M 17.875 72.9 L 17.875 17.851 L 72.827 17.851 L 72.827 60.157 L 17.882 60.115"
+                android:strokeColor="#000000"
+                android:strokeWidth="7.27"
+                android:strokeLineCap="round"
+                android:strokeLineJoin="round"/>
+            <path
+                android:name="line2"
+                android:pathData="M 29.978 45.522 L 51.951 45.522"
+                android:strokeColor="#000000"
+                android:strokeWidth="7.27"
+                android:strokeLineCap="round"
+                android:strokeLineJoin="round"/>
+            <path
+                android:name="line1"
+                android:pathData="M 29.978 32.513 L 60.895 32.513"
+                android:strokeColor="#000000"
+                android:strokeWidth="7.27"
+                android:strokeLineCap="round"
+                android:strokeLineJoin="round"/>
+            <path
+                android:name="chat"
+                android:pathData="M 17.875 72.9 L 17.875 17.851 L 72.827 17.851 L 72.827 60.157 L 17.882 60.115 M 29.978 32.513 L 60.895 32.513 M 29.978 45.522 L 51.951 45.522"
+                android:fillAlpha="0.4"
+                android:strokeColor="#000000"
+                android:strokeAlpha="0.4"
+                android:strokeWidth="7.27"
+                android:strokeLineCap="round"
+                android:strokeLineJoin="round"/>
+        </vector>
+    </aapt:attr>
+    <target android:name="body">
+        <aapt:attr name="android:animation">
+            <objectAnimator
+                android:propertyName="trimPathStart"
+                android:duration="800"
+                android:valueFrom="1"
+                android:valueTo="0"
+                android:valueType="floatType"
+                android:interpolator="@android:interpolator/fast_out_slow_in"/>
+        </aapt:attr>
+    </target>
+    <target android:name="line2">
+        <aapt:attr name="android:animation">
+            <objectAnimator
+                android:propertyName="trimPathStart"
+                android:duration="800"
+                android:valueFrom="1"
+                android:valueTo="0"
+                android:valueType="floatType"
+                android:interpolator="@android:interpolator/fast_out_slow_in"/>
+        </aapt:attr>
+    </target>
+    <target android:name="line1">
+        <aapt:attr name="android:animation">
+            <objectAnimator
+                android:propertyName="trimPathStart"
+                android:duration="800"
+                android:valueFrom="1"
+                android:valueTo="0"
+                android:valueType="floatType"
+                android:interpolator="@android:interpolator/fast_out_slow_in"/>
+        </aapt:attr>
+    </target>
+</animated-vector>
