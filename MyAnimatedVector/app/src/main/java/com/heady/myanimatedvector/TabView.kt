@@ -54,7 +54,7 @@ class TabView : LinearLayout {
         isSelected: Boolean,
         isPreviouslySelected: Boolean
     ) {
-        inflate(context, R.layout.tab_view, this)
+        inflate(context, R.layout.view_tab, this)
 
         val ivVector = findViewById<ShapeableImageView>(R.id.iv_vector)
         val tvTitle = findViewById<MaterialTextView>(R.id.tv_title)
