@@ -1,0 +1,32 @@
+<animated-vector xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:aapt="http://schemas.android.com/aapt">
+    <aapt:attr name="android:drawable">
+        <vector
+            android:width="24dp"
+            android:height="24dp"
+            android:viewportWidth="24"
+            android:viewportHeight="24">
+
+            <!--For clip-path to work it must be above path for some reason-->
+            <clip-path
+                android:name="myClipPath"
+                android:pathData="M0,0H24V0H0V0Z" /> <!-- Initial clip: 0 height -->
+
+            <path
+                android:name="myPath"
+                android:fillColor="#FF0000"
+                android:pathData="M0,0H24V24H0V0Z" />
+        </vector>
+    </aapt:attr>
+    <target android:name="myPath">
+        <aapt:attr name="android:animation">
+            <objectAnimator
+                android:duration="1000"
+                android:interpolator="@android:interpolator/fast_out_slow_in"
+                android:propertyName="pathData"
+                android:valueFrom="M0,0H24V0H0V0Z"
+                android:valueTo="M0,0H24V24H0V0Z"
+                android:valueType="pathType" />
+        </aapt:attr>
+    </target>
+</animated-vector>
